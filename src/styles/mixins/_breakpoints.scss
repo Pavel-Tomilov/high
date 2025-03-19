@@ -1,0 +1,38 @@
+@mixin big-desctop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet1 {
+  @media (max-width: 1228px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin card-mini {
+  flex-direction: column;
+  height: 300px;
+  position: relative;
+}
+
+@mixin slach {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+
+
+}
