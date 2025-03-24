@@ -93,6 +93,10 @@ a {
   @include tablet {
     padding: 0 27px;
   }
+
+  @include mobile {
+    padding: 0 21px;
+  }
 }
 
 .centered {
@@ -131,4 +135,9 @@ a {
 
   }
 
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+  }
 }
