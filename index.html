@@ -12,7 +12,7 @@
   <link rel="preload" href="fonts/tt_firs_neue_trial_regular-webfont.woff2" as="font">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style.css">
-<script defer src="src/js/main.js"></script>
+  <script defer src="src/js/main.js"></script>
 
 </head>
 <header class="header">
@@ -22,13 +22,13 @@
     </a>
     <div class="menulimiter">
       <nav class="nav" title="">
-          <ul class="list-reset flex nav__list">
-            <li class="nav__item"><a href="#about" class="nav__item-link">О студии</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__item-link">Наши проекты</a></li>
-            <li class="nav__item"><a href="#" class="nav__item-link">Услуги</a></li>
-            <li class="nav__item"><a href="#" class="nav__item-link">Мастер-классы</a></li>
-            <li class="nav__item"><a href="#contacts" class="nav__item-link">Контакты</a></li>
-          </ul>
+        <ul class="list-reset flex nav__list">
+          <li class="nav__item"><a href="#about" class="nav__item-link">О студии</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__item-link">Наши проекты</a></li>
+          <li class="nav__item"><a href="#" class="nav__item-link">Услуги</a></li>
+          <li class="nav__item"><a href="#" class="nav__item-link">Мастер-классы</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__item-link">Контакты</a></li>
+        </ul>
       </nav>
     </div>
     <div class="burger">
@@ -127,6 +127,7 @@
           <li class="projects__item2 card flex">
             <div class="card-image">
               <picture>
+                <source srcset="image/2-320.jpg" media="(max-width: 320px)">
                 <source srcset="image/card2-1024.jpg" media="(max-width: 1024px)">
                 <img src="image/card2.jpg" alt="">
               </picture>
@@ -149,6 +150,7 @@
           <li class="projects__item3 card flex">
             <div class="card-image">
               <picture>
+                <source srcset="image/3-320.png" media="(max-width: 320px)">
                 <source srcset="image/Rectangle3-992.jpg" media="(max-width: 768px)">
                 <source srcset="image/card3-1024.jpg" media="(max-width: 1024px)">
                 <img src="image/card3.jpg" alt="">
@@ -202,6 +204,7 @@
           <li class="projects__item6 card flex">
             <div class="card-image">
               <picture>
+                <source srcset="image/5-320.jpg" media="(max-width: 320px)">
                 <source srcset="image/card6-1024.jpg" media="(max-width: 1024px)">
                 <img src="image/card6.jpg" alt="">
               </picture>
@@ -215,8 +218,8 @@
                 Как принято считать, многие известные личности и по сей день остаются уделом либералов…
               </p>
 
-             </div>
-             <div class="card-cont">
+            </div>
+            <div class="card-cont">
               <img class="card-svg" src="image/mdi_calendar_today.svg" alt="">
               <span class="card-date">9 марта</span>
             </div>
@@ -224,6 +227,7 @@
           <li class="projects__item7 card flex">
             <div class="card-image">
               <picture>
+                <source srcset="image/6-320.jpg" media="(max-width: 320px)">
                 <source srcset="image/card7-1024.jpg" media="(max-width: 1024px)">
                 <img src="image/card7.jpg" alt="">
               </picture>
@@ -281,35 +285,35 @@
       </div>
     </section>
   </main>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const toggleMenu = document.querySelector('.burger');
-  const menu = document.querySelector('.nav');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleMenu = document.querySelector('.burger');
+      const menu = document.querySelector('.nav');
 
-  toggleMenu.addEventListener('click', function() {
-    this.classList.toggle('active');
-    menu.classList.toggle('open');
+      toggleMenu.addEventListener('click', function () {
+        this.classList.toggle('active');
+        menu.classList.toggle('open');
 
-    // Блокировка прокрутки страницы
-    if (menu.classList.contains('open')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  });
+        // Блокировка прокрутки страницы
+        if (menu.classList.contains('open')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
 
-  // Закрытие меню при клике на ссылку
-  const navLinks = document.querySelectorAll('.nav__item-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      toggleMenu.classList.remove('active');
-      menu.classList.remove('open');
-      document.body.style.overflow = '';
+      // Закрытие меню при клике на ссылку
+      const navLinks = document.querySelectorAll('.nav__item-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          toggleMenu.classList.remove('active');
+          menu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
     });
-  });
-});
 
-</script>
+  </script>
 </body>
 <footer class="footer">
   <div class="footer__content container">
