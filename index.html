@@ -84,6 +84,7 @@
         </div>
         <div class="about__right">
           <picture>
+            <source srcset="image/photo-320.jpg" media="(max-width: 320px)">
             <source srcset="image/Rectangle17-992.jpg" media="(max-width: 768px)">
             <source srcset="image/Rectangle17_1200.jpg" media="(max-width: 1024px)">
             <img class="about__right-image" src="image/Rectangle17.jpg" alt="Изображение фотоаппарата">
@@ -102,6 +103,7 @@
         <ul class="list-reset projects__list">
           <li class="projects__item1 card flex">
             <picture>
+              <source srcset="image/1-320.jpg" media="(max-width: 320px)">
               <source srcset="image/Rectangle12-992.jpg" media="(max-width: 768px)">
               <source srcset="image/card1-1024.jpg" media="(max-width: 1024px)">
               <img class="card-image" src="image/card1.jpg" alt="">
@@ -279,7 +281,35 @@
       </div>
     </section>
   </main>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const toggleMenu = document.querySelector('.burger');
+  const menu = document.querySelector('.nav');
 
+  toggleMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.classList.toggle('open');
+
+    // Блокировка прокрутки страницы
+    if (menu.classList.contains('open')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Закрытие меню при клике на ссылку
+  const navLinks = document.querySelectorAll('.nav__item-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      toggleMenu.classList.remove('active');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+});
+
+</script>
 </body>
 <footer class="footer">
   <div class="footer__content container">
