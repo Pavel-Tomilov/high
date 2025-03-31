@@ -228,10 +228,18 @@
       margin-bottom: 11px;
     }
 
-    @include mobile {
+    @include tablet4 {
       font-size: 18px;
       width: 278px;
       margin-bottom: 16px;
+    }
+
+    @include tablet3 {
+      width: 556px;
+    }
+
+    @include mobile {
+      width: 278px;
     }
   }
 
@@ -243,7 +251,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-
 
   &__item-top {
 
@@ -274,6 +281,11 @@
     }
 
     @include mobile {
+      grid-area: 1 / 1 / 2 / 3;
+      height: 228px;
+    }
+
+    @include mini-mobile {
       height: 186px;
       background-image: url(../image/rec1-320.jpg);
       background-size: cover;
@@ -311,7 +323,11 @@
       height: 257px;
     }
 
-    @include mobile {
+@include mobile {
+  height: 174px;
+}
+
+    @include mini-mobile {
       height: 105px;
       background-image: url(../image/Rec3-320.jpg);
       background-size: cover;
@@ -350,6 +366,10 @@
     }
 
     @include mobile {
+      height: 174px;
+    }
+
+    @include mini-mobile {
       height: 105px;
       background-image: url(../image/Rec4-320.jpg);
       background-size: cover;
@@ -363,7 +383,7 @@
   padding-bottom: 71px;
 
   @include big-desctop {
-    padding-bottom: 60px;
+    padding-bottom: 83px;
   }
 
   @include tablet {
@@ -505,6 +525,14 @@
         width: 232px;
         padding: 10px 22px;
 
+      }
+
+      @include tablet4 {
+        width: 223px;
+      }
+
+      @include mobile {
+        width: 232px;
       }
 
 
@@ -831,6 +859,7 @@
 
     @include big-desctop {
       grid-area: 3 / 1 / 4 / 4;
+height: 306px;
     }
 
     @include tablet {
@@ -860,6 +889,10 @@
       width: 312px;
     }
 
+    @include tablet4 {
+      width: 300px;
+    }
+
     @include mobile {
       max-width: 290px;
     }
@@ -877,6 +910,10 @@
     margin-bottom: 13px;
 
     @include big-desctop {
+      margin-bottom: 17px;
+    }
+
+    @include mobile {
       margin-bottom: 15px;
     }
   }
@@ -911,7 +948,9 @@
 
     @include big-desctop {
       display: flex;
-      margin-bottom: 25px;
+font-weight: 400;
+font-size: 16px;
+line-height: 137%;
     }
 
     @include tablet {
@@ -1030,6 +1069,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
+      gap: 33px;
     }
   }
 
@@ -1059,6 +1099,11 @@
       grid-area: 2 / 1 / 3 / 5;
       height: 439px;
     }
+
+@include tablet4 {
+  grid-area: 2 / 1 / 3 / 7;
+  height: auto;
+}
 
     @include mobile {
       height: 424px;
